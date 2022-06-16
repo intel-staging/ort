@@ -46,5 +46,5 @@ WORKDIR /home/$BUILD_USER
 USER $BUILD_USER
 ENV PATH /usr/local/gradle/bin:/usr/local/dotnet:$PATH
 RUN cd $USER
-RUN git clone https://github.com/intel-staging/ort.git -b ov_torchort_integration 
+RUN git clone https://github.com/intel-staging/ort.git -b preetha/manylinux_inference
 RUN cd ort/torch_ort_inference && $PYTHON_EXE build.py

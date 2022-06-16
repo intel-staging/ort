@@ -39,8 +39,9 @@ MINIMUM_RUNTIME_PYTORCH_VERSION_STR = "1.12.0"
 try:
     import torch
 
-    runtime_pytorch_version = version.parse(torch.__version__.split("+")[0])
+    runtime_pytorch_version = version.parse(torch.__version__.split("a0+")[0])
     minimum_runtime_pytorch_version = version.parse(MINIMUM_RUNTIME_PYTORCH_VERSION_STR)
+    print("runtime_pytorch_version", runtime_pytorch_version)
     if runtime_pytorch_version < minimum_runtime_pytorch_version:
         raise RuntimeError(
             "ONNX Runtime ORTInferenceModule frontend requires PyTorch version greater"
