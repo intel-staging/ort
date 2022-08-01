@@ -1,6 +1,6 @@
-[OpenVINO™ Torch-ORT](https://github.com/pytorch/ort#accelerate-inference-for-pytorch-models-with-onnx-runtime-preview) accelerates PyTorch models using OpenVINO™ Execution Provider for ONNX Runtime. This product is designed for PyTorch developers who want to get started with OpenVINO™ in their inferencing applications. It delivers OpenVINO™ inline optimizations that enhance inferencing performance with minimal code modifications.
+[OpenVINO™ Integration with Torch-ORT](https://github.com/pytorch/ort#accelerate-inference-for-pytorch-models-with-onnx-runtime-preview) accelerates PyTorch models using OpenVINO™ Execution Provider for ONNX Runtime. This product is designed for PyTorch developers who want to get started with OpenVINO™ in their inferencing applications. It delivers OpenVINO™ inline optimizations that enhance inferencing performance with minimal code modifications.
 
-OpenVINO™ Torch-ORT accelerates inference across many AI models on a variety of Intel® hardware such as:
+OpenVINO™ Integration with Torch-ORT accelerates inference across many AI models on a variety of Intel® hardware such as:
 
 * Intel® CPUs
 * Intel® integrated GPUs
@@ -37,13 +37,13 @@ For more API calls and environment variables, see [Usage](https://github.com/pyt
 For quick start, explore the [samples](https://github.com/pytorch/ort/tree/main/torch_ort_inference/tests) for Bert Sequence Classification and Image Classification scenarios.
 
 ## License
-OpenVINO™ Torch-ORT is licensed under [MIT](https://github.com/pytorch/ort/blob/main/LICENSE). By contributing to the project, you agree to the license and copyright terms therein and release your contribution under these terms.
+OpenVINO™ Integration with Torch-ORT is licensed under [MIT](https://github.com/pytorch/ort/blob/main/LICENSE). By contributing to the project, you agree to the license and copyright terms therein and release your contribution under these terms.
 
 ## Support
 Please submit your questions, feature requests and bug reports via [GitHub Issues](https://github.com/pytorch/ort/issues).
 
 ## How to Contribute
-We welcome community contributions to OpenVINO Torch-ORT. If you have an idea for improvement:
+We welcome community contributions to OpenVINO™ Integration with Torch-ORT. If you have an idea for improvement:
 
 * Share your proposal via [GitHub Issues](https://github.com/pytorch/ort/issues).
 * Submit a [Pull Request](https://github.com/pytorch/ort/pulls).
