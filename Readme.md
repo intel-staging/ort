@@ -175,7 +175,7 @@ Once you have created your environment, execute the following steps to validate 
 
 1. Clone this repo
 
-    - `git clone git@github.com:pytorch/ort.git`
+    - `git clone https://github.com/pytorch/ort.git`
 <br/><br/>
 2. Install extra dependencies
 
@@ -212,11 +212,41 @@ If no provider options are specified by user, OpenVINO™ Execution Provider is 
 backend = "CPU"
 precision = "FP32"
 ```
+
 For more details on APIs, see [usage.md](/torch_ort_inference/docs/usage.md).
 
 ### Note
 
 Experimental support on Intel® MyriadX VPU in this preview. 
+
+## Code Sample
+
+Below is an example of how you can leverage OpenVINO™ integration with Torch-ORT in a simple NLP usecase. 
+A pretrained [BERT model](https://huggingface.co/textattack/bert-base-uncased-CoLA) fine-tuned on the CoLA dataset from HuggingFace model hub is used to predict grammar correctness on a given input text. 
+
+
+```python 
+from transformers 
+import AutoTokenizer, AutoModelForSequenceClassification
+import numpy as np
+from torch_ort import ORTInferenceModule
+tokenizer = AutoTokenizer.from_pretrained(
+            "textattack/bert-base-uncased-CoLA")
+model = AutoModelForSequenceClassification.from_pretrained(
+        "textattack/bert-base-uncased-CoLA")
+# Wrap model in ORTInferenceModule to prepare the model for inference using OpenVINO Execution Provider on CPU
+model = ORTInferenceModule(model)
+text = "Replace me any text by you'd like ."
+encoded_input = tokenizer(text, return_tensors='pt')
+output = model(**encoded_input)
+# Post processing
+logits = output.logits
+logits = logits.detach().cpu().numpy()
+# predictions
+pred = np.argmax(logits, axis=1).flatten()
+print("Grammar correctness label (0=unacceptable, 1=acceptable)")
+print(pred)
+```
 
 ## License
 
