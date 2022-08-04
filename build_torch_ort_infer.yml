@@ -1,0 +1,16 @@
+ resources:
+  repositories:
+  - repository: ort
+    type: github
+    endpoint: intel-staging
+    name: intel-staging/ort
+    
+ pool:
+  name: 'OpenVINO_Pytorch'
+ variables:
+    WORK_DIR: $(Pipeline.Workspace)/ort
+    
+ steps:
+ 
+   - script: |
+      rm -rf $(WORK_DIR) ; mkdir $(WORK_DIR) 
