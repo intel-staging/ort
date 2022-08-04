@@ -169,21 +169,9 @@ By default, torch-ort-infer depends on PyTorch 1.12 and ONNX Runtime OpenVINO EP
 
     - `python -m torch_ort.configure`
 
-## Verify your installation
+## Samples
 
-Once you have created your environment, execute the following steps to validate that your installation is correct.
-
-1. Clone this repo
-
-    - `git clone https://github.com/pytorch/ort.git`
-<br/><br/>
-2. Install extra dependencies
-
-    - `pip install wget pandas transformers`
-<br/><br/>
-3. Run the inference script
-
-    - `python ./ort/torch_ort_inference/tests/bert_for_sequence_classification.py`
+To see OpenVINO™ integration with torch-ort in action, refer to directory ./ort/torch_ort_inference/demos, which shows you how to run inference on some of the most popular Deep Learning models.
 
 ## Add ONNX Runtime for PyTorch to your PyTorch inference script
 
