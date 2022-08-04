@@ -5,6 +5,8 @@
     endpoint: intel-staging
     name: intel-staging/ort
     
+ on:
+   [push, pull_request]
  pool:
   name: 'OpenVINO_Pytorch'
  variables:
@@ -13,4 +15,18 @@
  steps:
  
    - script: |
-      rm -rf $(WORK_DIR) ; mkdir $(WORK_DIR) 
+      rm -rf $(WORK_DIR) ; mkdir $(WORK_DIR)
+   
+   - checkout: self
+     clean: true
+     lfs: false
+     path: ort
+ 
+   - script: |
+      python3.8 -m venv build_torch_ort_venv
+      source build_torch_ort_venv/bin/activate
+     displayName: "Setup"
+    
+   - script: |
+      cd torch_ort_inference
+      python build.py
