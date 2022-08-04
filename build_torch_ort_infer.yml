@@ -5,8 +5,6 @@
     endpoint: intel-staging
     name: intel-staging/ort
     
- on:
-   [push, pull_request]
  pool:
   name: 'OpenVINO_Pytorch'
  variables:
