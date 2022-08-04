@@ -1,6 +1,6 @@
 # Bert for sequence Classification
 
-We use an text classification model  [textattack/bert-base-uncased-CoLA](https://huggingface.co/textattack/bert-base-uncased-CoLA) from HuggingFace. This model is trained on the BERT architecture for sequence classification to check grammar.
+We use a text classification model [textattack/bert-base-uncased-CoLA](https://huggingface.co/textattack/bert-base-uncased-CoLA) from HuggingFace models. This model is trained on the BERT architecture for sequence classification to check grammar.
 
 ## Model Metadata
 | Domain | Application | Industry  | Framework | Input Data Format |
@@ -42,6 +42,9 @@ Once you have created your environment, execute the following steps to validate 
 3. Run the inference script with default options
 
     - `python ./ort/torch_ort_inference/demos/bert_for_sequence_classification.py`
+<br/><br/>
+    **Note**: OpenVINOExecutionProvider is enabled with CPU and FP32 by default.
+<br/><br/>
 
 ## Run demo with custom options
     usage: python ./ort/torch_ort_inference/demos/bert_for_sequence_classification.py [-h] [--pytorch-only] [--input INPUT] [--input-file INPUT_FILE] [--provider PROVIDER] [--backend BACKEND] [--precision PRECISION]
@@ -51,15 +54,18 @@ Once you have created your environment, execute the following steps to validate 
     optional arguments:
     -h, --help            show this help message and exit
     --pytorch-only        disables ONNX Runtime inference
-    --input "INPUT"         input sentence, put in quotes
+    --input "INPUT"         input sentence, put it in quotes
     --input-file INPUT_FILE
                             path to input file in .tsv format
     --provider PROVIDER   ONNX Runtime Execution Provider
     --backend BACKEND     OpenVINO target device (CPU, GPU).
     --precision PRECISION
                             OpenVINO target device precision (FP16 or FP32)
+
     
-    Default options and inputs are selected if no arguments are given
+**Note**: Default options and inputs are selected if no arguments are given
+
+
     
 ## Expected output
 
@@ -74,3 +80,6 @@ Once you have created your environment, execute the following steps to validate 
 
     Average inference time: 25.2306ms
     Total Inference time: 50.4613ms
+
+<br/><br/>
+For more details on APIs, see [usage.md](/torch_ort_inference/docs/usage.md)
