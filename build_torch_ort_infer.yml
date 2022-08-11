@@ -2,7 +2,7 @@
   repositories:
   - repository: ort
     type: github
-    endpoint: intel-staging
+    endpoint: Intel Staging
     name: intel-staging/ort
     
  pool:
