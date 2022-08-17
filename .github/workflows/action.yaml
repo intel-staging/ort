@@ -11,6 +11,6 @@ jobs:
       uses: actions/checkout@v3
     - name: Build Packages
       run: |
-        python version
+        python3 --version
         cd torch_ort_inference
         python build.py
