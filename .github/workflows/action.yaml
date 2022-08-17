@@ -3,6 +3,7 @@ on:
   push:
     branches:    
       - gitaction_devops
+      - github_actions_test
 jobs:
   stage-one:
     runs-on: ubuntu-latest
