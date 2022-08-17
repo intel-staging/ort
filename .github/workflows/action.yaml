@@ -12,5 +12,6 @@ jobs:
     - name: Build Packages
       run: |
         python3 --version
+        ls
         cd torch_ort_inference
         python build.py
