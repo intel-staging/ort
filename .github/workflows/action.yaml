@@ -1,6 +1,6 @@
 name: Integration Testing
 on:
-  push:
+  pull_request:
     branches:    
       - gitaction_devops
 jobs:
