@@ -1,0 +1,16 @@
+name: Integration Testing
+on:
+  pull_request:
+    branches:    
+      - gitaction_devops
+jobs:
+  stage-one:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Build Packages
+      run: |
+        python version
+        cd torch_ort_inference
+        python build.py
