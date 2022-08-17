@@ -16,3 +16,4 @@ jobs:
         ls
         cd torch_ort_inference
         python build.py
+        ls
