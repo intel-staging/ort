@@ -19,5 +19,8 @@ jobs:
         python build.py
         cd dist
         ls
+        pip install torch_ort_infer*
+        pip install pandas
+        pip install transformers
         cd ../demos/
         python bert_for_sequence_classification.py --input "This is a sample program"
