@@ -14,7 +14,10 @@ jobs:
       run: |
         python3 --version
         ls
+        pip install onnxruntime-openvino
         cd torch_ort_inference
         python build.py
         cd dist
         ls
+        cd ../demos/
+        python bert_for_sequence_classification.py --input "This is a sample program"
