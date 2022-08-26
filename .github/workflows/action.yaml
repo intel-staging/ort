@@ -1,6 +1,6 @@
 name: Workflow Testing
 on:
-  pull_request:
+  push:
     branches:    
       - githubaction_devops
 jobs:
