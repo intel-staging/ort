@@ -4,7 +4,7 @@
 #--------------------------------------------------------------------------
 
 ARG OPENVINO_VERSION="2022.2.0"
-ARG TORCHORT_BRANCH="main"
+ARG TORCHORT_BRANCH="ov_torchort_ga_docker_test"
 
 FROM openvino/ubuntu20_runtime:${OPENVINO_VERSION}
 
