@@ -43,6 +43,20 @@ RUN python build.py && \
     cd dist/ && \
     pip install *.whl; \
     rm -rf *.whl
+    
+WORKDIR /home/ovtort/
+
+RUN pip install --upgrade cmake
+
+RUN git clone --recursive https://github.com/intel/onnxruntime.git && \
+    cd onnxruntime && \
+    ./build.sh --config Release --build_shared_lib --parallel --enable_training --use_openvino CPU_FP32 --build_wheel --skip_tests; \
+    cd build/Linux/Release/dist && \
+    pip install *.whl; \
+    cd /home/ovtort/ &&\ 
+    rm -rf onnxruntime
+    
+WORKDIR ${WORKDIR_PATH}
 
 RUN pip install wget pandas torchvision Pillow transformers
 
