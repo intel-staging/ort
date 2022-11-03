@@ -34,7 +34,7 @@ By default, Intel® CPU is used to run inference. However, you can change the de
 For more API calls and environment variables, see [Usage](https://github.com/pytorch/ort/blob/main/torch_ort_inference/docs/usage.md).
 
 ## Samples
-For quick start, explore the [samples](https://github.com/pytorch/ort/tree/main/torch_ort_inference/demos) for Bert Sequence Classification and Image Classification scenarios.
+For quick start, explore the [samples](https://github.com/pytorch/ort/tree/main/torch_ort_inference/demos) for few HuggingFace and TorchVision models.
 
 ## License
 OpenVINO™ Integration with Torch-ORT is licensed under [MIT](https://github.com/pytorch/ort/blob/main/LICENSE). By contributing to the project, you agree to the license and copyright terms therein and release your contribution under these terms.
