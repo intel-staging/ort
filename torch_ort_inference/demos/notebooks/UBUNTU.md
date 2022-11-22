@@ -52,6 +52,7 @@ This step installs torch-ort-infer python package and dependencies like OpenVINO
 ```bash
 python -m pip install --upgrade pip wheel setuptools
 pip install -r requirements.txt
+python -m torch_ort.configure
 ```
 
 ## 7. Launch the Notebooks!
