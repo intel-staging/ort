@@ -1,7 +1,7 @@
 # required for CI test
 pandas
 sklearn
-numpy==1.19.5
+numpy==1.22.0
 transformers==v4.3.2
 torch
 torchvision
